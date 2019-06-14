@@ -20,6 +20,8 @@ public class LoginStepDefinition {
 		System.setProperty("webdriver.chrome.driver", "D:\\Aanand\\Driver\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://ui.cogmento.com");
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
 	}
 
 	@When("^title of login page is CRM$")
